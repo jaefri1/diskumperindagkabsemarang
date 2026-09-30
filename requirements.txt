@@ -1,0 +1,27 @@
+# ============================================================
+# requirements.txt
+# Dashboard Analitik UMKM & Koperasi — Kabupaten Semarang
+# Magang Dinas Koperasi, UMKM, Perindustrian dan Perdagangan
+# ============================================================
+
+# ── Wajib untuk menjalankan dashboard ─────────────────────────
+streamlit>=1.32.0
+pandas>=2.0.0
+numpy>=1.26.0
+plotly>=5.18.0
+kaleido>=0.2.1          # export chart ke PNG untuk laporan PDF
+folium>=0.15.0          # peta choropleth
+streamlit-folium>=0.20.0  # render peta di dalam Streamlit
+reportlab>=4.1.0        # generator laporan PDF
+
+# ── Tambahan untuk pipeline data (cleaning & clustering) ──────
+# Hanya perlu dijalankan kalau memperbarui data dari dinas
+openpyxl>=3.1.0         # baca file Excel (.xlsx)
+scikit-learn>=1.4.0     # K-Means clustering
+
+# ── Catatan ────────────────────────────────────────────────────
+# sqlite3, json, pathlib, datetime, re, os → bawaan Python,
+# tidak perlu diinstal terpisah.
+#
+# mysql-connector-python TIDAK diperlukan kecuali memilih jalur
+# MySQL (lihat database_schema_mysql.sql) alih-alih SQLite.
